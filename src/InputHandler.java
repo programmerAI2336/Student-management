@@ -5,26 +5,17 @@ public class InputHandler {
     public int command;
 
     public void printUsableCommand() {
-        System.out.println("--- Add student's information : press 1 ---");
-        System.out.println("--- Delete student's information : press 2 ---");
-        System.out.println("--- Edit student's information : press 3 ---");
-        System.out.println("--- Sort student list  by name : press 4 ---");
-        System.out.println("--- Sort student list by GPA : press 5 ---");
-        System.out.println("--- Print student's information : press 6 ---");
-        System.out.println("--- Print all student's information : press 7 ---");
-        System.out.print("""
-
-                """);
+        System.out.println("Add student's information : press 1 ");
+        System.out.println("Delete student's information : press 2 ");
+        System.out.println("Edit student's information : press 3 ");
+        System.out.println("Sort student list  by name : press 4 ");
+        System.out.println("Sort student list by GPA : press 5 ");
+        System.out.println("Print student's information : press 6 ");
+        System.out.println("Print all student's information : press 7");
     }
 
     public void getCommand() {
         System.out.print("- Enter command : ");
-        command = console.nextInt();
-    }
-
-    public static void main(String[] args) {
-        InputHandler inputHandler = new InputHandler();
-        inputHandler.printUsableCommand();
-        inputHandler.getCommand();
+        command = Integer.parseInt(console.nextLine());
     }
 }
