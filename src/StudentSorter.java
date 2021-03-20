@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class StudentSorter {
-    private ArrayList<Student> list;
+    private final ArrayList<Student> list;
 
     public StudentSorter(ArrayList<Student> list) {
         this.list = list;
@@ -30,6 +29,14 @@ public class StudentSorter {
     }
 
     public void sortByGPA() {
-
+        for(int i = 0 ; i < list.size() ; i ++){
+            for(int j = i + 1 ; j < list.size() ; j ++){
+                if(list.get(i).GPA < list.get(j).GPA){
+                    Student temp = list.get(j);
+                    list.set(j,list.get(i));
+                    list.set(i,temp);
+                }
+            }
+        }
     }
 }
