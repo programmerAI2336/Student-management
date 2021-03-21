@@ -68,7 +68,7 @@ public class StudentEditor {
                 break;
             } else {
                 if (list.indexOf(student) == list.size() - 1) {
-                    System.out.println("Wrong ID.");
+                    System.err.println("Invalid ID.");
                     break;
                 }
             }

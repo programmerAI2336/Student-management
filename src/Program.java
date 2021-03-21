@@ -22,9 +22,6 @@ public class Program {
             } else if (inputHandler.command == 0) {
                 System.out.println("Quit program!");
                 break;
-            } else {
-                System.err.println("Invalid command!");
-                break;
             }
         }
         data.writeData(list);
