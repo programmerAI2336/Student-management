@@ -5,6 +5,7 @@ public class InputHandler {
     public int command;
 
     public void printUsableCommand() {
+        System.out.println("Quit : press 0 ");
         System.out.println("Add student's information : press 1 ");
         System.out.println("Delete student's information : press 2 ");
         System.out.println("Edit student's information : press 3 ");
