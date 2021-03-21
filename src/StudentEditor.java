@@ -65,10 +65,13 @@ public class StudentEditor {
                 System.out.println("Removed student :");
                 System.out.println(student.ID + "\t" + "|" + "\t" + student.name + "\t" + "|" + "\t" + student.birthYear + "\t" + "|" + "\t" + student.GPA);
                 list.remove(student);
+                break;
             } else {
-                System.out.println("Wrong ID.");
+                if (list.indexOf(student) == list.size() - 1) {
+                    System.out.println("Wrong ID.");
+                    break;
+                }
             }
-            break;
         }
     }
 
@@ -86,6 +89,8 @@ public class StudentEditor {
                 System.out.println("Last GPA : " + student.GPA);
                 System.out.print("New GPA : ");
                 student.GPA = getGPA();
+                System.out.println("Changed student's information :");
+                System.out.println(student.ID + "\t" + "|" + "\t" + student.name + "\t" + "|" + "\t" + student.birthYear + "\t" + "|" + "\t" + student.GPA);
                 break;
             }
         }
